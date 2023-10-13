@@ -13,7 +13,7 @@ export const GameBoard: React.FC<GameBoardProps> = () => {
   const [userHexCode, setUserHexCode] = useState("#000000");
   const [startingHexCode, setStartingHexCode] = useState("#000000");
   const [gameActive, setGameActive] = useState(false);
-  const [score, setScore] = useState({ r: 100, g: 100, b: 100, total: 100 });
+  const [score, setScore] = useState({ r: 0, g: 0, b: 0, total: 0 });
 
   return (
     <section className="flex flex-col justify-center items-center m-4">
