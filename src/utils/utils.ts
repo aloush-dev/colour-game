@@ -15,7 +15,7 @@ export const getRandomHexNumber = () => {
 };
 
 export const hexToRgb = (hex: string) => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex) || "";
 
   return {
     r: parseInt(result[1], 16),
