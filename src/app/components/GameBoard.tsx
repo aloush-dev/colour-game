@@ -11,7 +11,7 @@ type GameBoardProps = {};
 export const GameBoard: React.FC<GameBoardProps> = () => {
   const [userHexCode, setUserHexCode] = useState("#000000");
   const [startingHexCode, setStartingHexCode] = useState("#000000");
-  const [gameActive, setGameActive] = useState(true);
+  const [gameActive, setGameActive] = useState(false);
   const [score, setScore] = useState({ r: 0, g: 0, b: 0, total: 0 });
 
   return (
@@ -38,7 +38,17 @@ export const GameBoard: React.FC<GameBoardProps> = () => {
               {score.total ? (
                 <Image width={200} alt="congratulations" src={congratsImg} />
               ) : (
-                ""
+                <div className="text-black text-center font-bold whitespace-pre-line">
+                  <p>
+                    Welcome to the Color Game! You'll encounter two colorful
+                    squares and your goal is to fine-tune the left square using
+                    the sliders to closely match it with the right square.
+                  </p>
+                  <p>
+                    Achieve a perfect 100% match to secure your spot on the
+                    leaderboard.
+                  </p>
+                </div>
               )}
 
               <Score score={score} gameActive={gameActive} />
