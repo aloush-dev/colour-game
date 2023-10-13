@@ -24,10 +24,12 @@ export const Leaderboard: React.FC = () => {
       <span>
         {value?.docs.map((doc) => {
           const data = doc.data();
+          const time = data.time.toDate()
 
           return (
             <div className="border-2 m-2 p-2 text-center" key={doc.id}>
-              {data.name}
+              <p>{data.name}</p>
+              <p>{time.toLocaleDateString()}</p>
             </div>
           );
         })}
