@@ -7,10 +7,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <SliderContextProvider>
-      <main className="h-screen w-screen bg-[#24293f] text-white flex flex-col">
+      <main className="min-h-screen w-screen bg-[#24293f] text-white flex flex-col">
         <Header />
         <GameBoard />
-        <div className="text-center fixed bottom-0 inset-x-0 flex justify-center items-end p-4 underline">
+        <div className="text-center flex justify-center items-end p-4 underline">
           <Link href="https://www.aloush.dev" target="_blank">
             aloush.dev
           </Link>
