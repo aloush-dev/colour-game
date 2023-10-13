@@ -35,8 +35,8 @@ export const GameBoard: React.FC<GameBoardProps> = () => {
               />
             </div>
           ) : (
-            <>
-              <div className="flex flex-col p-6 items-center justify-center rounded-3xl bg-slate-300 w-80 h-auto">
+            <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col p-6 items-center justify-center rounded-3xl bg-slate-300 w-80 h-auto m-10">
                 {score.total ? (
                   <Image width={200} alt="congratulations" src={congratsImg} />
                 ) : (
@@ -60,8 +60,9 @@ export const GameBoard: React.FC<GameBoardProps> = () => {
                   setGameActive={setGameActive}
                 />
               </div>
+
               <Leaderboard />
-            </>
+            </div>
           )}
         </div>
       </div>

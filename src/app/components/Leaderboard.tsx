@@ -18,25 +18,23 @@ export const Leaderboard: React.FC = () => {
   }
 
   return (
-    <div className="p-6 text-center">
-      <h2>100%'ers</h2>
+    <div className="flex flex-col p-6 rounded-3xl bg-slate-300 w-80 h-auto text-slate-800 m-10">
+      <h2 className="font-bold text-xl text-center">100%'ers</h2>
 
-      <span>
-        {value?.docs.map((doc) => {
-          const data = doc.data();
-          const time = data.time.toDate();
+      {value?.docs.map((doc) => {
+        const data = doc.data();
+        const time = data.time.toDate();
 
-          return (
-            <div
-              className="flex bg-slate-200 text-slate-800 rounded-lg font-bold m-2 p-2 text-center"
-              key={doc.id}
-            >
-              <p className="mr-4">{data.name}</p>
-              <p>{time.toLocaleDateString()}</p>
-            </div>
-          );
-        })}
-      </span>
+        return (
+          <div
+            className="flex text-slate-200 bg-slate-800 rounded-lg font-bold p-2 my-2 text-center justify-between w-full"
+            key={doc.id}
+          >
+            <p className="">{data.name}</p>
+            <p>{time.toLocaleDateString()}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
