@@ -18,17 +18,20 @@ export const Leaderboard: React.FC = () => {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-6 text-center">
       <h2>100%'ers</h2>
 
       <span>
         {value?.docs.map((doc) => {
           const data = doc.data();
-          const time = data.time.toDate()
+          const time = data.time.toDate();
 
           return (
-            <div className="border-2 m-2 p-2 text-center" key={doc.id}>
-              <p>{data.name}</p>
+            <div
+              className="flex bg-slate-200 text-slate-800 rounded-lg font-bold m-2 p-2 text-center"
+              key={doc.id}
+            >
+              <p className="mr-4">{data.name}</p>
               <p>{time.toLocaleDateString()}</p>
             </div>
           );

@@ -24,7 +24,7 @@ export const GameControl: React.FC<GameControlProps> = ({
   return (
     <button
       onClick={startGame}
-      className="bg-slate-800 m-8 px-10 py-4 text-xl text-slate-200 rounded-lg"
+      className="bg-slate-800 m-8 px-10 py-4 text-xl text-slate-200 rounded-lg font-bold"
     >
       PLAY
     </button>

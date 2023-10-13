@@ -41,9 +41,9 @@ export const GameBoard: React.FC<GameBoardProps> = () => {
                   <Image width={200} alt="congratulations" src={congratsImg} />
                 ) : (
                   <div className="text-black text-center font-bold whitespace-pre-line">
-                    <h1 className="text-xl">Welcome to the Color Game!</h1>
+                    <h1 className="text-xl">Welcome to the Colour Game!</h1>
                     <p className="py-2">
-                      You'll encounter two colorful squares and your goal is to
+                      You'll encounter two colourful squares and your goal is to
                       fine-tune the left square using the sliders to closely
                       match it with the right square.
                     </p>
