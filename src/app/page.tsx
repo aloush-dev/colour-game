@@ -6,8 +6,8 @@ import { GameBoard } from "./components/GameBoard.tsx";
 export default function Home() {
   return (
     <SliderContextProvider>
+      <main className="h-screen w-screen bg-[#24293f] text-white flex flex-col">
       <Header />
-      <main className="h-screen w-screen bg-slate-800 text-white flex flex-col">
         <GameBoard />
       </main>
     </SliderContextProvider>

@@ -32,12 +32,11 @@ export const Sliders: React.FC<SlidersProps> = ({
       <span className="flex">
         <div
           className={`w-20 h-20 border-2 m-4 `}
-          style={{ backgroundColor: startingHexCode }}
+          style={{ backgroundColor: userHexCode }}
         ></div>
-
         <div
           className={`w-20 h-20 border-2 m-4 `}
-          style={{ backgroundColor: userHexCode }}
+          style={{ backgroundColor: startingHexCode }}
         ></div>
       </span>
 

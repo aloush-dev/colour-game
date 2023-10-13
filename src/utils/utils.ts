@@ -34,16 +34,8 @@ export const getStartingColour = () => {
 };
 
 export const gameFinishPercentage = (startHex: string, finishHex: string) => {
-  const startRgb = hexToRgb(startHex);
-  const finishRgb = hexToRgb(finishHex);
-
-  const startRed = startRgb.r;
-  const startGreen = startRgb.g;
-  const startBlue = startRgb.b;
-
-  const finishRed = finishRgb.r;
-  const finishGreen = finishRgb.g;
-  const finishBlue = finishRgb.b;
+  const { r: startRed, g: startGreen, b: startBlue } = hexToRgb(startHex);
+  const { r: finishRed, g: finishGreen, b: finishBlue } = hexToRgb(finishHex);
 
   const maxDistance = Math.sqrt(255 ** 2 + 255 ** 2 + 255 ** 2);
 
@@ -55,14 +47,13 @@ export const gameFinishPercentage = (startHex: string, finishHex: string) => {
   const greenPercentage = (1 - greenDistance / maxDistance) * 100;
   const bluePercentage = (1 - blueDistance / maxDistance) * 100;
 
-  const totalPercentage = Number(
-    ((redPercentage + greenPercentage + bluePercentage) / 3).toFixed(0)
-  );
+  const totalPercentage =
+    (redPercentage + greenPercentage + bluePercentage) / 3;
 
   return {
-    r: redPercentage,
-    g: greenPercentage,
-    b: bluePercentage,
-    total: totalPercentage,
+    r: Number(redPercentage.toFixed(0)),
+    g: Number(greenPercentage.toFixed(0)),
+    b: Number(bluePercentage.toFixed(0)),
+    total: Number(totalPercentage.toFixed(0)),
   };
 };

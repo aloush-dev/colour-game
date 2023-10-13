@@ -23,9 +23,16 @@ export const Timer: React.FC<TimerProps> = ({
       setScore(gameFinishPercentage(startingHexCode, userHexCode));
     }
   }, [timer]);
+
   return (
-    <div className="flex justify-center items-center">
-      {timer === 0 ? "Time's up!" : `Time remaining: ${timer} seconds`}
+    <div className="flex justify-center items-center text-center ">
+      <div
+        className={`timer transition-opacity ${
+          timer === 0 ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        {timer === 0 ? "Time's up!" : `Time remaining: ${timer} seconds`}
+      </div>
     </div>
   );
 };
